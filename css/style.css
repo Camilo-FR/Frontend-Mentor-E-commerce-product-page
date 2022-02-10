@@ -36,10 +36,6 @@ body {
   display: none;
 }
 
-.show {
-  display: flex;
-}
-
 /********/
 /*HEADER*/
 /********/
@@ -47,7 +43,7 @@ body {
 #top-nav {
   margin-top: 4%;
   border-bottom: solid 3px hsl(223, 64%, 98%);
-  margin-bottom: 5%;
+  margin-bottom: 8%;
   display: flex;
   align-items: baseline;
 }
@@ -70,7 +66,7 @@ body {
   color: hsl(219, 9%, 45%);
   margin-right: 3%;
   cursor: pointer;
-  padding-bottom: 8%;
+  padding-bottom: 4%;
   border-bottom: solid 5px transparent;
 }
 
@@ -87,11 +83,110 @@ body {
 }
 
 .panier {
-  margin-right: 5%;
+  cursor: pointer;
+  margin-right: 2rem;
 }
 
 .image-avatar {
+  cursor: pointer;
   height: 3.5rem;
+  width: 3.5rem;
+  border: solid 3px transparent;
+}
+
+.image-avatar img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.image-avatar:hover {
+  border-radius: 50px;
+  border: solid 3px hsl(26, 100%, 55%);
+}
+
+.shop-menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cart-modal {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 4px 8px hsl(219, 9%, 45%);
+  border-radius: 5px;
+  width: 21rem;
+  margin-right: 0;
+  position: absolute;
+  right: -3rem;
+  top: 4rem;
+}
+
+.p-cart {
+  padding-left: 8%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  border-bottom: solid 3px hsl(223, 64%, 98%);
+  margin-block-start: 1.5rem;
+  margin-block-end: 0em;
+}
+
+.cart-product {
+  display: none;
+  color: hsl(219, 9%, 45%);
+  font-weight: bold;
+  height: 13.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-choice {
+  display: none;
+  color: hsl(219, 9%, 45%);
+  height: 13.5rem;
+  flex-direction: column;
+}
+
+.top-choice {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.top-product-img {
+  width: 3rem;
+}
+
+.top-product-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.top-product-delete {
+  cursor: pointer;
+}
+
+.valid-choice {
+  display: flex;
+  justify-content: center;
+}
+
+.valid-choice button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 85%;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 /************/
@@ -239,12 +334,24 @@ main {
   border-radius: 5px;
   width: 50%;
   cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.add-product:hover {
+  opacity: 60%;
 }
 
 .add-product img {
   height: 1rem;
   margin-right: 5%;
   color: #ffffff;
+}
+
+/* Priorité */
+
+.show {
+  display: flex;
 }
 
 /* Attribution */

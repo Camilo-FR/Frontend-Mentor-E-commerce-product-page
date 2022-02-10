@@ -29,13 +29,41 @@
           <li>About</li>
           <li>Contact</li>
         </ul>
-        <div class="avatar-section">
-          <img class="panier" src="images/icon-cart.svg" alt="logo panier" />
-          <img
-            class="image-avatar"
-            src="images/image-avatar.png"
-            alt="image de profil avatar"
-          />
+        <div class="shop-menu">
+          <div class="avatar-section">
+            <div class="panier">
+              <img src="images/icon-cart.svg" alt="logo panier" />
+            </div>
+            <div class="image-avatar">
+              <img src="images/image-avatar.png" alt="image de profil avatar" />
+            </div>
+          </div>
+          <div class="cart-modal">
+            <p class="p-cart">Cart</p>
+            <div class="cart-product show">
+              <p>Your cart is empty.</p>
+            </div>
+            <div class="cart-choice">
+              <div class="top-choice">
+                <div class="top-product-img">
+                  <img
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="thumbnail procuct 1"
+                  />
+                </div>
+                <div class="top-product-text"></div>
+                <div class="top-product-delete">
+                  <img
+                    src="images/icon-delete.svg"
+                    alt="poubelle pour delete"
+                  />
+                </div>
+              </div>
+              <div class="valid-choice">
+                <button>Checkout</button>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -102,15 +130,15 @@
         </div>
         <div class="select-product">
           <div class="more-less">
-            <img src="images/icon-minus.svg" alt="less" />
-            <div class="quantity">0</div>
-            <img src="images/icon-plus.svg" alt="more" />
+            <img class="less" src="images/icon-minus.svg" alt="less" />
+            <div data-quantity="0" class="quantity">0</div>
+            <img class="more" src="images/icon-plus.svg" alt="more" />
           </div>
 
-          <div class="add-product">
+          <button class="add-product">
             <img src="images/icon-cart-white.svg" alt="logo panier" />
             <p>Add to cart</p>
-          </div>
+          </button>
         </div>
       </div>
     </main>
