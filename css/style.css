@@ -341,11 +341,11 @@ main {
   fill: hsl(26, 100%, 55%);
 }
 
-.big-prod-slider {
+.big-slider-elements {
   display: none;
 }
 
-.big-prod-slider img {
+.big-slider-elements img {
   width: 100%;
   border-radius: 15px;
 }
@@ -502,6 +502,16 @@ main {
 
 .show {
   display: flex;
+  animation: fade 0.8s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Attribution */
