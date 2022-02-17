@@ -24,6 +24,8 @@ const nbThumbnail = thumbnailSliderImg.length;
 let count = 0;
 let countThumbnail = 0;
 
+// Fonctions
+
 //Partie Thumbnail
 
 thumbnailImg.forEach((img) => {
@@ -35,6 +37,8 @@ thumbnailImg.forEach((img) => {
     const bigProdShow = document.querySelector(
       ".bigProd" + img.dataset.identity
     );
+
+    countThumbnail = img.dataset.identity - 1;
 
     bigProd.forEach((pic) => {
       pic.classList.remove("show");
@@ -94,7 +98,17 @@ bigProd.forEach((bigImg) => {
     bigProdSlider.forEach((img) => {
       img.classList.remove("show");
     });
-    console.log(bigImgSlider);
+
+    const thumBorder = document.querySelector(
+      ".border" + bigImg.dataset.border
+    );
+    console.log(thumBorder);
+
+    thumbnailSliderImg.forEach((thumb) => {
+      thumb.classList.remove("thumbnail-border");
+    });
+
+    thumBorder.classList.add("thumbnail-border");
     bigImgSlider.classList.add("show");
     thumbnailSlider.classList.add("show");
   });
@@ -185,5 +199,4 @@ function nextSlide() {
 }
 
 previousSlider.addEventListener("click", previousSlide);
-
 nextSlider.addEventListener("click", nextSlide);
