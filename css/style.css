@@ -30,6 +30,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   margin-left: 10%;
   margin-right: 10%;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -38,9 +39,7 @@ body {
 /********/
 
 #top-nav {
-  margin-top: 4%;
   border-bottom: solid 3px hsl(223, 64%, 98%);
-  margin-bottom: 6%;
   display: flex;
   align-items: baseline;
 }
@@ -206,6 +205,7 @@ body {
 
 main {
   display: flex;
+  padding-top: 2rem;
 }
 
 .product-img {
@@ -325,8 +325,8 @@ main {
   cursor: pointer;
   position: absolute;
   z-index: 4;
-  right: 31.2%;
-  top: 22%;
+  right: 31.5%;
+  top: 11%;
 }
 
 .previous-slider svg:hover path {
@@ -353,6 +353,7 @@ main {
 .big-img-slider {
   width: 50%;
   position: relative;
+  padding-bottom: 3rem;
 }
 
 .thumbnail-slider {
@@ -361,7 +362,7 @@ main {
   position: absolute;
   z-index: 4;
   width: 35%;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -514,13 +515,14 @@ main {
   }
 }
 
-/* Attribution */
-/* 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+@media only screen and (min-width: 1500px) {
+  .close-slider {
+    top: 16%;
+  }
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
+@media only screen and (max-width: 1400px) {
+  .close-slider {
+    top: 15%;
+  }
+}
