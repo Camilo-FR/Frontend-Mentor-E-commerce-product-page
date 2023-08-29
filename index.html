@@ -18,16 +18,29 @@
   </head>
   <body>
     <header>
-      <nav id="top-nav">
+      <div class="mobile-nav">
         <ul>
-          <li class="logo-sneakers">
-            <img src="images/logo.svg" alt="logo sneakers" />
-          </li>
+          <li class="close-nav-mobile"><img src="images/icon-close.svg" alt="logo close"></li>
           <li>Collections</li>
           <li>Men</li>
           <li>Women</li>
           <li>About</li>
           <li>Contact</li>
+        </ul>
+      </div>
+      <nav id="top-nav">
+        <ul>
+          <li class="icon-menu-mobile">
+            <img src="images/icon-menu.svg" alt="logo menu" />
+          </li>
+          <li class="logo-sneakers">
+            <img src="images/logo.svg" alt="logo sneakers" />
+          </li>
+          <li class="hidden-mobile">Collections</li>
+          <li class="hidden-mobile">Men</li>
+          <li class="hidden-mobile">Women</li>
+          <li class="hidden-mobile">About</li>
+          <li class="hidden-mobile">Contact</li>
         </ul>
         <div class="shop-menu">
           <div class="avatar-section">
@@ -73,6 +86,18 @@
       <!-- Grosse images -->
 
       <div class="product-img">
+        
+        <div class="previous-slider-mobile">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 1 3 9l8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
         <div class="big-img">
           <div data-border="1" data-big-img="1" class="show big-prod bigProd1">
             <img src="images/image-product-1.jpg" alt="image sneakers 1" />
@@ -86,6 +111,17 @@
           <div data-border="4" data-big-img="4" class="big-prod bigProd4">
             <img src="images/image-product-4.jpg" alt="image sneakers 4" />
           </div>
+        </div>
+        <div class="next-slider-mobile">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
         </div>
 
         <div class="thumbnail-section">

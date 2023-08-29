@@ -33,7 +33,6 @@ thumbnailImg.forEach((img) => {
     thumbnailImg.forEach((img) => img.classList.remove("thumbnail-border"));
     img.classList.add("thumbnail-border");
 
-    // console.log(img.dataset.identity);
     const bigProdShow = document.querySelector(
       ".bigProd" + img.dataset.identity
     );
@@ -130,8 +129,6 @@ thumbnailSliderImg.forEach((img) => {
 
     img.classList.add("thumbnail-border");
 
-    // console.log(img.dataset.slider);
-
     const bigProdShowSlider = document.querySelector(
       ".bigProdSlider" + img.dataset.slider
     );
@@ -140,7 +137,6 @@ thumbnailSliderImg.forEach((img) => {
       pic.classList.remove("show");
     });
 
-    // console.log(bigProdShowSlider);
     bigProdShowSlider.classList.add("show");
   });
 });
@@ -200,3 +196,24 @@ function nextSlide() {
 
 previousSlider.addEventListener("click", previousSlide);
 nextSlider.addEventListener("click", nextSlide);
+
+// Partie mobile
+
+//Menu burger
+
+const burger = document.querySelector(".icon-menu-mobile");
+const menu = document.querySelector(".mobile-nav");
+const close = document.querySelector(".close-nav-mobile");
+
+burger.addEventListener("click", () => {
+  menu.classList.add("show");
+});
+
+close.addEventListener("click", () => {
+  menu.classList.remove("show");
+});
+
+// Partie slider mobile
+
+const previousSliderMobile = document.querySelector(".previous-slider-mobile");
+const nextSliderMobile = document.querySelector(".next-slider-mobile");
