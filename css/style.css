@@ -87,8 +87,26 @@ body {
 }
 
 .panier {
+  position: relative;
   cursor: pointer;
   margin-right: 2rem;
+}
+
+.nbre-article {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 50%;
+  padding: 0.4rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: white;
 }
 
 .image-avatar {
@@ -638,6 +656,7 @@ main {
     left: 0;
     background-color: white;
     border-radius: 50%;
+    z-index: 2;
   }
 
   .next-slider-mobile {
@@ -695,5 +714,11 @@ main {
     justify-content: center;
     margin-top: 1rem;
     width: 100%;
+  }
+
+  .cart-modal {
+    z-index: 4;
+    right: 1rem;
+    top: 4rem;
   }
 }

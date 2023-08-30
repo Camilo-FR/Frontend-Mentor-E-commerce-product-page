@@ -21,6 +21,7 @@ const thumbnailSliderImg = document.querySelectorAll(".thumbnail-slider-img");
 const bigProdSlider = document.querySelectorAll(".big-slider-elements");
 const nbSlide = bigProdSlider.length;
 const nbThumbnail = thumbnailSliderImg.length;
+const nbreArticle = document.querySelector(".nbre-article");
 let count = 0;
 let countThumbnail = 0;
 
@@ -67,14 +68,27 @@ panier.addEventListener("click", () => {
 });
 
 addProduct.addEventListener("click", () => {
+  // Apparition du nombre d'article sur le logo panier
+
+  nbreArticle.textContent = quantity.textContent;
+
+  if (quantity.textContent == 0) {
+    nbreArticle.classList.remove("show");
+  } else {
+    nbreArticle.classList.add("show");
+  }
+
   // On enlève 'cart is empty.' et on affiche le/les produit(s) concerné(s)
-  cartProduct.classList.remove("show");
-  cartChoice.classList.add("show");
 
-  topProductText.textContent =
-    "Fall Limited Edition Sneakers $125.00 x " + quantity.textContent;
+  if (quantity.textContent > 0) {
+    cartProduct.classList.remove("show");
+    cartChoice.classList.add("show");
 
-  result.textContent = " $" + 125 * quantity.textContent + ".00";
+    topProductText.textContent =
+      "Fall Limited Edition Sneakers $125.00 x " + quantity.textContent;
+
+    result.textContent = " $" + 125 * quantity.textContent + ".00";
+  }
 });
 
 // Pour delete le panier
@@ -217,3 +231,36 @@ close.addEventListener("click", () => {
 
 const previousSliderMobile = document.querySelector(".previous-slider-mobile");
 const nextSliderMobile = document.querySelector(".next-slider-mobile");
+const nbMobile = bigProd.length;
+let countMobile = 0;
+
+function previousSlideMobile() {
+  if (countMobile > 0) {
+    countMobile--;
+  } else {
+    countMobile = 0;
+  }
+
+  bigProd.forEach((pic) => {
+    pic.classList.remove("show");
+  });
+
+  bigProd[countMobile].classList.add("show");
+}
+
+function nextSlideMobile() {
+  if (countMobile < nbMobile - 1) {
+    countMobile++;
+  } else {
+    countMobile = 0;
+  }
+
+  bigProd.forEach((pic) => {
+    pic.classList.remove("show");
+  });
+
+  bigProd[countMobile].classList.add("show");
+}
+
+previousSliderMobile.addEventListener("click", previousSlideMobile);
+nextSliderMobile.addEventListener("click", nextSlideMobile);
