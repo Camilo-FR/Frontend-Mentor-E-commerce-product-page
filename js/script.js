@@ -94,6 +94,7 @@ addProduct.addEventListener("click", () => {
 // Pour delete le panier
 
 topProductDelete.addEventListener("click", () => {
+  nbreArticle.classList.remove("show");
   cartChoice.classList.remove("show");
   cartProduct.classList.add("show");
 });
